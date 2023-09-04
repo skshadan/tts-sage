@@ -13,12 +13,12 @@ from TTS.utils.audio import AudioProcessor
 ##########################################
 #Change this to your dataset directory
 ##########################################
-output_path = "/content/drive/MyDrive/meSilverclone-dataset/traineroutput/"
+output_path = os.path.dirname(os.path.abspath(__file__))
 dataset_config = BaseDatasetConfig(
 ##########################################
 #Change this to your dataset directory
 ##########################################
-    formatter="ljspeech", meta_file_train="metadata.csv", path=os.path.join(output_path, "/content/drive/MyDrive/meSilverclone-dataset")
+    formatter="ljspeech", meta_file_train="metadata.csv", path="/home/ec2-user/tts-sage/recipes/ljspeech/vits_tts/adam"
 
 )
 audio_config = VitsAudioConfig(
