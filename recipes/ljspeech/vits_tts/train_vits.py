@@ -22,13 +22,13 @@ dataset_config = BaseDatasetConfig(
 
 )
 audio_config = VitsAudioConfig(
-    sample_rate=22050, win_length=1024, hop_length=256, num_mels=80, mel_fmin=0, mel_fmax=None
+    sample_rate=48000, win_length=1024, hop_length=256, num_mels=80, mel_fmin=0, mel_fmax=None
 )
 
 config = VitsConfig(
     audio=audio_config,
-    run_name="vits_ljspeech",
-    batch_size=12,
+    run_name="tts-adam-48k",
+    batch_size=10,
     eval_batch_size=12,
     batch_group_size=4,
 #    num_loader_workers=8,
